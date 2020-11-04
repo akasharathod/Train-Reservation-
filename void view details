@@ -1,0 +1,50 @@
+
+void view_details(node *start)
+{
+	char confirm;
+	int i=0;
+	pd passdetails;
+    FILE *fp;
+	fp=fopen("seats_reserved.txt","a");
+	system("cls");
+	printf("\n Enter no of seats: ");
+	scanf("%d",&passdetails.num_of_seats);
+	printf("\n\n>>Press Enter to view available trains:");
+	getch();
+	printf("\n\nEnter train number:> ");
+	
+	scanf("%d",&passdetails.train_num);
+	if(passdetails.train_num>=1001 && passdetails.train_num<=1010)
+	{
+
+		display_tc(passdetails.train_num,passdetails.num_of_seats);		
+	}
+	else
+	{
+		printf("\nInvalid train Number! Enter again--> ");
+	
+	}
+	
+	printf("\n\nConfirm Ticket (y/n):>");
+	start:
+	scanf(" %c",&confirm);
+	if(confirm == 'y')
+	{
+		printf("==================");
+		printf("\n Reservation Done\n");
+		printf("==================");
+		printf("\nPress any key to go back to Main menu");
+	}
+	else
+	{
+		if(confirm=='n')
+		{
+			printf("\nReservation Not Done!\nPress any key to go back to  Main menu!");
+		}
+		else
+		{
+			printf("\nInvalid choice entered! Enter again-----> ");
+			
+		}
+}
+}}
