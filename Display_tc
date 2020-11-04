@@ -1,0 +1,33 @@
+
+void display_tc( )
+{
+	int key;
+	node *temp;
+	temp=start;
+	printf("Enter the register no:\n");
+	scanf("%d",&key);
+	if(start==NULL)
+	{
+		printf("There is no record exist");
+		
+	}
+	else
+	{
+		 while(temp!=NULL)
+		 {
+		 	if(temp->reg_no==key)
+		 	{
+		 		printf("\t\t---------ticket details--------\n");
+		 		printf("\t\t   Registration Number:\n\t\t   %d\n", temp->reg_no);
+	        	printf("\t\t   Name :\n\t\t   %s\n\n", temp->name);
+		        printf("\t\t   age :\n\t\t   %d\n\n", temp->age);
+		        printf("\t\t   sex :\n\t\t   %s\n\n", temp->sex);
+		        printf("\t\t   mo_no :\n\t\t  +91%s\n\n",temp->mo_no);
+		        printf("\t\t   Number Of Seats :\n\t\t  %d\n\n", temp->num_of_seats);
+	            printf("\t\t   Train Number :\n\t\t  %d\n\n", temp->train_num);
+		 		
+			 }
+			temp=temp->next;
+		 }
+	}
+}
