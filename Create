@@ -1,0 +1,23 @@
+
+void create()
+{
+	node *new1;
+	new1=(node *)malloc(sizeof(node));
+	new1->reg_no=1;
+	printf("Name: ");
+	scanf("%s", new1->name);
+	printf("Age : ");
+	scanf("%d", &new1->age);
+	printf("sex: ");
+	scanf("%s", new1->sex);
+	printf("mo_no: " );
+	scanf("%s", new1->mo_no);
+	printf("train_num:");
+	scanf("%d", &new1->train_num);
+	printf("no_of_seats");
+	scanf("%d", &new1->num_of_seats);
+	start=new1;
+	new1->next=NULL;
+	num++;
+	
+}
