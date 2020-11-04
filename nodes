@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<malloc.h>
+#include<conio.h>
+#define size 5
+
+
+typedef struct NODE
+{
+	int reg_no;
+	int age;
+	char name[20];
+	char sex[10];
+	char mo_no[10];
+	int train_num;
+	int num_of_seats;
+	struct NODE *next;
+} node,pd;
+
+node* deq();
+void create();
+int reserve(node*);
+int cancel(int);
+void enq(node*);
+void display();
+void display_tc();
+void view_details();
+void login();
+
+node *start;
+node *front;
+node *rear;
+int count=0;
+int num=0;
