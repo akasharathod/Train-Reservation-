@@ -1,0 +1,24 @@
+void display()
+{
+	node *temp;
+	temp=start;
+	if(start==NULL)
+	{
+		printf("there are no passengers");
+	}
+	else
+	{
+
+	while(temp!=NULL)
+	{
+		printf("\nRegistration Number: %d\n", temp->reg_no);
+		printf("Name : %s\n\n", temp->name);
+		printf("age : %d\n\n", temp->age);
+		printf("sex : %s\n\n", temp->sex);
+		printf("mo_no :+91%s\n\n",temp->mo_no);
+		printf("Number Of Seats: %d\n\n", temp->num_of_seats);
+	    printf("Train Number :%d\n\n", temp->train_num);
+		temp=temp->next;
+    }
+}
+}
