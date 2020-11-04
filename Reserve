@@ -1,0 +1,50 @@
+
+int reserve(node *start)
+{
+	
+	if(start==NULL)
+	{
+   		 create(start);
+		 return 1;
+	}
+	else 
+	{
+	
+	node *temp, *new_node;
+	temp=start;
+	while(temp->next!=NULL)
+	{ 
+	  temp=temp->next;
+	}
+	
+	new_node=(node *)malloc(sizeof(node));
+	
+	printf("Name: ");
+	scanf("%s", new_node->name);
+	printf("Age : ");
+	scanf("%d", &new_node->age);
+	printf("sex: ");
+	scanf("%s", new_node->sex);
+	printf("mo_no: " );
+	scanf("%s", new_node->mo_no);
+	printf("train_num:");
+	scanf("%d", &new_node->train_num);
+	printf("no_of_seats:");
+	scanf("%d", &new_node->num_of_seats);
+
+	
+	new_node->next=NULL;
+	if(num<=size)
+	{
+		num++;
+		new_node->reg_no=num;
+		temp->next=new_node;
+		
+		return 1;
+	}
+	else
+	{
+		enq(new_node);
+		return 0;
+	}
+}
